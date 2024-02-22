@@ -1,0 +1,11 @@
+To recognize the aura of a songs.db file I would utilize a querry like this:
+
+SELECT artists.name, AVG(energy) + AVG(valence) + AVG(danceability) AS aura FROM songs LEFT JOIN artists ON songs.artist_id = artists.id GROUP BY artists.name ORDER BY aura DESC LIMIT 2;
+
+In that whay we get the 2 artists that influenced the most by sum of the averages from energy, valence and danceability values.
+
+But, probably, we could get a better representation analysing those values separetly to the user relate more with his mood. For example: Bruno Mars was the one that had the greatest sum of averages, but it doesn't mean that he had the most danceability average.
+
+So, if we want that the user relate with a danceability mood, we would be wrong to recommend Bruno Mars.
+
+After checking all the individual averages, we could expose those analysis and only then show the most prominent moods represented by the artist that had the higher average value.
