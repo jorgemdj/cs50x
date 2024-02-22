@@ -1,0 +1,11 @@
+sort1 uses: bubble sort
+
+How do you know?: considerable divergence between the sorted list and the random/reversed impling that the omega(n) is 1
+
+sort2 uses: merge sort
+
+How do you know?: the most consistence response time in all the .txt files (and the fastest) impling that is theta(nlog(n))
+
+sort3 uses:  selection sort
+
+How do you know?: the response time was consistent too, but it was slower, impling a theta(n^2) because was less efficient
