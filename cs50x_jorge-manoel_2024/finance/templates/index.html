@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portifolio
+{% endblock %}
+
+{% block main %}
+    <main class="container py-5 text-center">
+        <table class="table table-striped">
+            <thead>
+                <th class="text-start">Symbol</th>
+                <th class="text-end">Shares</th>
+                <th class="text-end">Price</th>
+                <th class="text-end">TOTAL</th>
+            </thead>
+        {% for i in range(portifolio|length) %}
+            <tbody>
+                <tr>
+                    <td class="text-start">{{ portifolio[i].symbol }}</td>
+                    <td class="text-end">{{ portifolio[i].sum_shares }}</td>
+                    <td class="text-end">{{ ticker_list[i] | usd }}</td>
+                    <td class="text-end">{{ ticker_list_total[i] | usd }}</td>
+                </tr>
+            </tbody>
+        {% endfor %}
+            <tfoot>
+                <tr>
+                    <td class="border-0 fw-bold text-end" colspan="3">Cash</td>
+                    <td class="border-0 w-bold text-end">{{ cash | usd }}</td>
+                </tr>
+                <tr>
+                    <td class="border-0 fw-bold text-end" colspan="3">TOTAL</td>
+                    <td class="border-0 w-bold text-end">{{ (total + cash) | usd }}</td>
+                </tr>
+            </tfoot>
+        </table>
+    </main>
+
+
+{% endblock %}

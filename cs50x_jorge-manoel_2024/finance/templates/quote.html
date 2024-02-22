@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <form action="/quote" method="post">
+        {% if quote is defined and quote != None %}
+        <div class="mb-3">
+            A share of {{ quote.symbol }} ({{ quote.symbol }}) costs ${{ quote.price }}.
+        </div>
+        {% else %}
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="symbol" placeholder="Symbol" type="text">
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-primary" type="submit">Quote</button>
+        </div>
+        {% endif %}
+
+
+    </form>
+{% endblock %}
