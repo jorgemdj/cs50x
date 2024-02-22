@@ -1,0 +1,125 @@
+<style>body {
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Ensure the body takes at least the full height of the viewport */
+}
+
+.navbar-brand {
+    margin-left: 20px; /* Ajuste o valor conforme necessário */
+}
+
+#bordao {
+    font-family: Arial, sans-serif;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+#conteudo {
+    padding: 20px;
+    margin-top: 100px;
+    /* Ajuste para garantir espaço abaixo do bordão */
+    opacity: 0;
+    /* Inicia o conteúdo como invisível */
+    transition: opacity 0.5s;
+    /* Adiciona uma transição suave para a mudança de opacidade */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-top: auto;
+    /* Push the footer to the bottom */
+}
+
+.collaborator {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px; /* Espaçamento à esquerda */
+    margin-right: 20px; /* Espaçamento à direita */
+}
+
+.collaborator img {
+border-radius: 50%;
+margin-right: 20px;
+width: 400px; /* Ajuste o tamanho desejado */
+height: 400px;
+object-fit: cover;
+}
+
+.collaborator p {
+max-width: 400px; /* Ajuste a largura máxima do parágrafo */
+}
+
+.collaborator:nth-child(even) {
+flex-direction: row-reverse;
+}
+
+#content {
+    flex: 1; /* Ocupa todo o espaço restante */
+    min-height: 100vh; /*Ajuste conforme o necessário*/
+}
+
+#carouselExample {
+    max-height: 400px; /* Altura máxima desejada */
+    overflow: hidden; /* Esconde qualquer parte adicional que possa ultrapassar a altura máxima */
+  }
+
+  .carousel-item img {
+    max-width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+
+  #carouselControls {
+    position: relative;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5); /* Cor da faixa cinza escura */
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    transform: translateY(-50%);
+  }
+
+  .carousel-control-prev {
+    left: 10px;
+  }
+
+  .carousel-control-next {
+    right: 10px;
+  }
+
+  #grayStripe {
+    background-color: #333; /* Cor da faixa cinza escura */
+    height: 450px; /* Altura igual à altura do carrossel */
+    width: 100%; /* Largura total da página */
+    margin-top: 400px; /* Ajusta o margin-top para posicionar abaixo do carrossel */
+  }
+
+</style>
